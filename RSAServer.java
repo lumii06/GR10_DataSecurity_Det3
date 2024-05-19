@@ -42,7 +42,7 @@ public class RSAServer {
 
                     // Generate a symmetric key (AES)
                     KeyGenerator keyGenerator = KeyGenerator.getInstance("AES");
-                    keyGenerator.init(128); // AES key size can be 128, 192, or 256 bits
+                    keyGenerator.init(128); // AES key size will be 128
                     SecretKey symmetricKey = keyGenerator.generateKey();
 
                     // Encrypt the symmetric key with the client's public key
@@ -58,7 +58,7 @@ public class RSAServer {
                     // Example usage: Receive and decrypt a message from the client
                     String encryptedMessageBase64 = (String) serverIn.readObject();
                     byte[] encryptedMessage = Base64.getDecoder().decode(encryptedMessageBase64);
-
+                    System.out.println("-".repeat(30));
                     System.out.println("Encrypted message received from client: " + encryptedMessageBase64);
 
                     Cipher aesCipher = Cipher.getInstance("AES");
@@ -67,13 +67,17 @@ public class RSAServer {
                     String decryptedMessageStr = new String(decryptedMessage);
 
                     System.out.println("Client received and decrypted the symmetric key successfully.");
+                    System.out.println("-".repeat(30));
                     System.out.println("Decrypted message: " + decryptedMessageStr);
 
                 } catch (Exception e) {
+                    System.err.println("Error during client communication: " + e.getMessage());
                     e.printStackTrace();
                 }
             }
+            // error handling
         } catch (Exception e) {
+            System.err.println("Server initialization error: " + e.getMessage());
             e.printStackTrace();
         }
     }
