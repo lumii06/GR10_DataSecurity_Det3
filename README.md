@@ -23,3 +23,32 @@ Ky projekt është një console aplikacion i cili shërben për komunikimin e si
 ```bash
    javac RSAServer.java RSAClient.java
 ```
+4. **Run java files**:
+
+```bash
+java RSAServer
+java RSAClient
+```
+## Përshkrim i programit
+
+### Për RSAServer.java
+1. Kodi është shkruar brenda një blloku try catch.
+2. Bëhet inicializimi i serverit, duke krijuar "ServerSocket" në portin 12345.
+3. Brenda një while true blloku kemi një bllok tjetër try ku në të bëhen veprimet si në vazhdim.
+4. Gjenerohet key pair(çeëesi publik dhe privat) i RSA për serverin.
+5. Bëhet pranimi i public key të klientit.
+6. Gjenerohet çelësi simetrik AES me madhësinë 128.
+7. Bëhet enkriptimi i çelësit simetrik me anë të çelësit publik të klientit.
+8. Dërgohet çelësi simetrik i enkriptuar te klienti
+9. Së fundmi bëhet pranimi i mesazhit të enkriptuar nga klienti, dekriptohet mesazhi dhe shfaet në console.
+    
+### Për RSAClient.java
+// to be continued...
+
+
+## Shembuj egzekutimi
+### RSACLient
+<img src="Images/Client.png" alt="Egzekutimi i Klientit" width="500">
+
+### RSAServer
+<img src="Images/Server.png" alt="Egzekutimi i Serverit" width="500">
