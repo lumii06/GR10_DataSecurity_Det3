@@ -48,7 +48,7 @@ java RSAClient
 
 ## Shembuj egzekutimi
 ### RSACLient
-<img src="Images/Client.png" alt="Egzekutimi i Klientit" width="500">
+<img src="Images/Client.png" alt="Egzekutimi i Klientit" width="">
 
 ### RSAServer
-<img src="Images/Server.png" alt="Egzekutimi i Serverit" width="500">
+<img src="Images/Server.png" alt="Egzekutimi i Serverit" width="">
