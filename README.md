@@ -47,18 +47,18 @@ java RSAClient
 - Klienti krijon një socket per tu lidhur me serverin në adresen ‘localhost ’ dhe portin ‘12345’.
 - Krijohen ‘ObjectOutputStream’ dhe ‘ObjectInputStream’ për të dërguar dhe për të marrë objekte mes klientit dhe serverit.
 
-1. Gjenerimi i celësit RSA të klientit:
+2. Gjenerimi i celësit RSA të klientit:
 - Gjenerohen key pair i RSA (publik dhe privat) duke përdorur ‘KeyPairGenerator’.
-- Celësi publik i klientit i dërgohet serverit pasi të jetë koduar me Base64.
+- Çelësi publik i klientit i dërgohet serverit pasi të jetë koduar me Base64.
 
-1. Marrja dhe dekriptimi i celësit simetrik:
+3. Marrja dhe dekriptimi i celësit simetrik:
 - Klienti pret të marrë celësin simetrik të enkriptuar nga serveri.
-- Celësi simetrik i enkriptuar dekriptohet duke përdorur celësin privat të klientit me algoritmin RSA.
+- Çelësi simetrik i enkriptuar dekriptohet duke përdorur celësin privat të klientit me algoritmin RSA.
 
-1. Përdorimi i celësit simetrik:
-- Celësi simetrik i dekriptuar përdoret për të krijuar një intancë të ‘SecretKey’ për enkriptimin dhe dekriptimin e mesazheve me algoritmin AES.
+4. Përdorimi i celësit simetrik:
+- Çelësi simetrik i dekriptuar përdoret për të krijuar një intancë të ‘SecretKey’ për enkriptimin dhe dekriptimin e mesazheve me algoritmin AES.
 
-1. Dërgimi i mesazhit të enkriptuar re serveri:
+5. Dërgimi i mesazhit të enkriptuar te serveri:
 - Klienti merr një mesazh nga përdoruesi dhe e enkripton atë duke përdorur celësin simetrik AES.
 - Mesazhi i enkriptuar dërgohet te serveri pasi të jetë koduar me Base64.
 
