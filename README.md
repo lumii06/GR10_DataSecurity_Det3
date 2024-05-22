@@ -63,7 +63,7 @@ java RSAClient
 - Mesazhi i enkriptuar dërgohet te serveri pasi të jetë koduar me Base64.
 
 
-## Shembuj egzekutimi
+## Shembuj ekzekutimi
 ### RSACLient
 <img src="Images/Client.png" alt="Egzekutimi i Klientit" width="">
 
