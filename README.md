@@ -69,3 +69,9 @@ java RSAClient
 
 ### RSAServer
 <img src="Images/Server.png" alt="Egzekutimi i Serverit" width="">
+
+# Anëtarët e grupit
+- Lum Hoxha
+- Lura Gashi
+- Lyra Bullaku
+- Lorik Agaj
